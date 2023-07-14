@@ -15,14 +15,13 @@
         <h1>Lista de Tarefas</h1>
     </div>
         <main>
-            <div id="formulario">
-                <label for="inputnome">Tarefa: </label> <input type="text" name="nome" id="inputnome" autocomplete="off">
-
-                <label for="inputdata">Data: </label> <input type="date" name="data" id="inputdata" autocomplete="off">
-
-                <label for="inputhorario">Horário: </label> <input type="datetime" name="horario" id="inputhorario" autocomplete="off">
-
-                <div id="areabotoes"><button id="btnconfirmar">Confirmar</button> <button id="btncancelar">Cancelar</button></div>
+            <div class="soprohiddenfuncionar" hidden>
+                <div id="formulario" >
+                    <label for="inputnome">Tarefa: </label> <input type="text" name="nome" id="inputnome" autocomplete="off">
+                    <label for="inputdata">Data: </label> <input type="date" name="data" id="inputdata" autocomplete="off">
+                    <label for="inputhorario">Horário: </label> <input type="datetime" name="horario" id="inputhorario" autocomplete="off">
+                    <div id="areabotoes"><button id="btnconfirmar">Confirmar</button> <button id="btncancelar">Cancelar</button></div>
+                </div>
             </div>
 
 
@@ -38,17 +37,20 @@
                 </div>
             </div>
 
-            <div class="tarefa feito">
-                <div class="icone-tarefa">
+            <div class="tarefa-feito">
+                <div class="icone-tarefa-feito">
                     <i class="mdi mdi-check-circle"></i>
                 </div>
 
-                <div class="conteudo-tarefa">
+                <div class="conteudo-tarefa-feito">
                     <p id="pnometarefa">Nome Tarefa</p>
                     <p id="pdatatarefa">15/07/2023</p>
                     <p id="phorariotarefa">15:30</p>
                 </div>
             </div>
+
+
+            <button id="buttonmais"><img src="imagens/icone-mais-50px-50px-transparent-plus.png" alt=""></button>
 
         </main>
         <footer>&copy;Bruno Silva Rodrigues</footer>

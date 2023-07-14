@@ -27,6 +27,7 @@
     font-family: 'Super Comic 3';
     background-color: rgb(212, 210, 210);
     text-align: center;
+    position: fixed;
 }
 
 
@@ -68,6 +69,77 @@ input#inputhorario {
     background-color: rgb(178, 1, 1);
 }
 
+
+.tarefa {
+    display: grid;
+
+    font-family: 'Super Comic 3';
+    background-color: rgb(217, 217, 217);
+    margin: 40px;
+    padding: 30px;
+    grid-template-areas:
+    "icone  conteudo conteudo conteudo" ;
+
+    border-radius: 10px;
+    box-shadow: 9px 7px 15px rgba(0, 0, 0, 0.242);
+
+}
+
+.icone-tarefa {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-area: icone;
+}
+
+.conteudo-tarefa {
+    text-align: center;
+    grid-area: conteudo;
+}
+
+.tarefa-feito {
+    display: grid;
+
+    font-family: 'Super Comic 3';
+    background-color: rgb(217, 217, 217);
+    margin: 40px;
+    padding: 30px;
+    grid-template-areas:
+    "icone  conteudo conteudo conteudo" ;
+
+    border-radius: 10px;
+    box-shadow: 9px 7px 15px rgba(0, 0, 0, 0.242);
+    background-color: rgb(116, 237, 116);
+        color: rgb(113, 108, 108);
+        text-decoration: line-through;
+        font-weight: bolder;
+
+}
+
+.icone-tarefa-feito {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-area: icone;
+    color: green;
+}
+
+.conteudo-tarefa-feito {
+    text-align: center;
+    grid-area: conteudo;
+}
+
+#buttonmais {
+    border-radius: 100px;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    position: fixed;
+    
+}
+
 footer {
     background-color:#39e612;
     color: white;
@@ -76,6 +148,7 @@ footer {
     left: 0;
     position: fixed;
     width: 100%;
+    padding: 11px;
 }
 
 @media screen and (max-width: 600px) {
@@ -86,12 +159,14 @@ footer {
     }
 
     #formulario {
-        padding: 30px;
+        padding: 20px;
         margin: 30px;
         border-radius: 10px;
         box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.587);
         text-align: center;
         gap: .3em;
+        margin: 0 auto;
+        left: 20px;
     }
 
     input#inputnome {
@@ -120,6 +195,43 @@ footer {
     #btncancelar {
         padding: 10px;
         border-radius: 10px;
+    }
+
+    .tarefa {
+        margin: 40px;
+        padding: 30px;
+        
+    
+    }
+    
+    .icone-tarefa {
+        font-size: 1.5em;
+    }
+    
+    .conteudo-tarefa {
+        text-align: center;
+        grid-area: conteudo;
+    }
+
+    .tarefa-feito {
+        margin: 40px;
+        padding: 30px;
+        
+    }
+    
+    .icone-tarefa-feito {
+        font-size: 1.5em;
+        
+    }
+    
+    .conteudo-tarefa-feito {
+        text-align: center;
+        grid-area: conteudo;
+    }
+
+    #buttonmais {
+        right: 5px;
+        bottom: 40px;
     }
 
    
