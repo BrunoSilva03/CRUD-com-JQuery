@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Super Comic 3';
+    src: url('fontes/Super\ Comic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#titulo {
+    font-family: 'Super Comic 3';
+    background-color: #39e612;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Super Comic 3';
+    background-color: rgb(212, 210, 210);
+    text-align: center;
+}
+
+
+input#inputnome {
+    font-family: 'Super Comic 3';
+}
+
+input#inputdata {
+    font-family: 'Super Comic 3';
+}
+
+input#inputhorario {
+    font-family: 'Super Comic 3';
+}
+
+#btnconfirmar {
+    font-family: 'Super Comic 3';
+    background-color:#39e612;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.29);
+}
+
+#btnconfirmar:hover {
+    background-color:#2eba0f
+}
+
+#btncancelar {
+    font-family: 'Super Comic 3';
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.29);
+}
+
+#btncancelar:hover {
+    background-color: rgb(178, 1, 1);
+}
+
+footer {
+    background-color:#39e612;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    #titulo {
+        padding: 5px;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    #formulario {
+        padding: 30px;
+        margin: 30px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.587);
+        text-align: center;
+        gap: .3em;
+    }
+
+    input#inputnome {
+        font-size: 1em;
+    }
+
+    input#inputdata {
+        font-size: 1em;
+    }
+    
+
+    input#inputhorario {
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+
+    #areabotoes {
+        bottom: 0;
+    }
+
+    #btnconfirmar {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #btncancelar {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+   
+}
+
