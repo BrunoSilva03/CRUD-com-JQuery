@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas JQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="imagens/icone-site.png" type="image/x-icon">
+</head>
+<body>
+    <div id="titulo">
+        <h1>Lista de Tarefas</h1>
+    </div>
+        <main>
+            <div id="formulario">
+                <label for="idnome">Tarefa: </label> <input type="text" name="nome" id="idnome">
+
+                <label for="iddata">Data: </label> <input type="date" name="data" id="iddata">
+
+                <label for="idhorario">Horário: </label> <input type="datetime" name="horario" id="idhorario">
+
+                <button id="btnconfirmar">Confirmar</button> <button id="btncancelar">Cancelar</button>
+            </div>
+
+
+            <div class="tarefa">
+                <div class="icone-tarefa">
+                    <i class="mdi mdi-circle-outline"></i>
+                </div>
+
+                <div class="conteudo-tarefa">
+                    <p id="pnometarefa">Nome Tarefa</p>
+                    <p id="pdatatarefa">15/07/2023</p>
+                    <p id="phorariotarefa">15:30</p>
+                </div>
+            </div>
+
+            <div class="tarefa feito">
+                <div class="icone-tarefa">
+                    <i class="mdi mdi-check-circle"></i>
+                </div>
+
+                <div class="conteudo-tarefa">
+                    <p id="pnometarefa">Nome Tarefa</p>
+                    <p id="pdatatarefa">15/07/2023</p>
+                    <p id="phorariotarefa">15:30</p>
+                </div>
+            </div>
+
+        </main>
+        <footer>&copy;Bruno Silva Rodrigues</footer>
+</body>
+</html>
