@@ -151,7 +151,50 @@ footer {
     padding: 11px;
 }
 
+/* Telas gigantes como Nest Hub Max */
+@media screen and (min-width: 1024px) {
+    #titulo {
+        font-size: 2em;
+        padding: 10px;
+    }
 
+    #formulario {
+        font-size: 2em;
+        padding: 90px;
+        left: 250px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
+    }
+
+    #inputnome, #inputdata, #inputhorario {
+        font-size: 1em;
+    }
+
+    #inputhorario {
+        margin-bottom: 20px;
+    }
+
+    #btnconfirmar, #btncancelar {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .tarefa, .tarefa-feito {
+        max-width: 600px;
+        font-size: 2em;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+
+    #buttonmais {
+        bottom: 50px;
+        right: 15px;
+    }
+
+    footer {
+        font-size: 1.6em;
+    }
+}
 
 /* Outras telas maiores como Nest Hub por exemplo */
 @media screen and (min-width: 913px) and (max-width: 1024px) {
