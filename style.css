@@ -21,6 +21,11 @@
     margin-bottom: 10px;
 }
 
+p#textoinicial {
+    font-family: 'Super Comic 3';
+    text-align: center;
+}
+
 #formulario {
     display: flex;
     flex-direction: column;
@@ -157,6 +162,10 @@ footer {
         font-size: 2em;
         padding: 10px;
     }
+    
+    p#textoinicial {
+        font-size: 2em;
+    }
 
     #formulario {
         font-size: 2em;
@@ -202,6 +211,9 @@ footer {
         font-size: 1.5em;
     }
 
+    p#textoinicial {
+        font-size: 2em;
+    }
 
     #formulario {
         padding: 30px;
@@ -245,6 +257,9 @@ footer {
         padding: 30px;
     }
 
+    p#textoinicial {
+        font-size: 2em;
+    }
 
     #formulario {
         padding: 130px;
@@ -286,6 +301,10 @@ footer {
     #titulo {
         font-size: 1.9em;
         padding: 20px;
+    }
+
+    p#textoinicial {
+        font-size: 2em;
     }
 
     #formulario {
