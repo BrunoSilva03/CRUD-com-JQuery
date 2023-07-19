@@ -152,6 +152,49 @@ footer {
 }
 
 
+
+/* Outras telas maiores como Nest Hub por exemplo */
+@media screen and (min-width: 913px) and (max-width: 1024px) {
+    #titulo {
+        font-size: 1.5em;
+    }
+
+
+    #formulario {
+        padding: 30px;
+        font-size: 2em;
+        left: 200px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
+    }
+
+    #inputnome, #inputdata, #inputhorario {
+        font-size: 1em;
+    }
+
+    #inputhorario {
+        margin-bottom: 20px;
+    }
+
+    #btnconfirmar, #btncancelar {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .tarefa, .tarefa-feito {
+        font-size: 2em;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+
+    #buttonmais {
+        bottom: 40px;
+        right: 15px;    
+    }
+
+}
+
 /* Surface Pro 7 */
 @media screen and (min-width: 821px) and (max-width: 912px) {
     #titulo {
