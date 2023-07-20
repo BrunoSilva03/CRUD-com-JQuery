@@ -36,6 +36,10 @@ p#textoinicial {
 }
 
 
+input {
+    transition: background 3s linear;
+}
+
 input#inputnome {
     font-family: 'Super Comic 3';
 }
