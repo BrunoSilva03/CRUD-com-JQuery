@@ -107,6 +107,29 @@ input#inputhorario {
     grid-area: conteudo;
 }
 
+.areabotoestarefa {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#btnupdatetarefa {
+    color: rgb(3, 203, 3);
+}
+
+#btnupdatetarefa:hover {
+    color: rgb(1, 119, 1);
+}
+
+
+#btnexcluirtarefa {
+    color: rgb(253, 27, 27);
+}
+
+
+#btnexcluirtarefa:hover {
+    color: rgb(158, 17, 17);
+}
+
 .tarefa-feito {
     display: grid;
 
@@ -191,6 +214,12 @@ footer {
         padding: 5px;
     }
 
+    .tarefa, .tarefa-feito{
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 33px;
+        font-size: 2em;
+    }
 
     #buttonmais {
         bottom: 40px;

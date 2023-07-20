@@ -7,6 +7,8 @@ $(function() {
 
     $('#btnconfirmar').click(function() {
         conferirCampos();
+        
+
     })
 
     $('#btncancelar').click(function() {
@@ -40,7 +42,13 @@ $(function() {
         } else if($('#inputhorario').val() == '') {
             alert('Todos os campos precisam ser preenchidos');
             $('#inputhorario').css("background", "red");
+        } else {
+            criarTarefa();
         }
+    }
+
+    function criarTarefa() {
+        alert('Criar tarefa tarefinha');
     }
 
     function cancelar() {
