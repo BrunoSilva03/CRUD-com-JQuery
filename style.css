@@ -156,8 +156,47 @@ footer {
     padding: 11px;
 }
 
+/* Telas gigantes */
+@media screen and (min-width: 1200px) {
+    #titulo {
+        font-size: 2em;
+    }
+
+    p#textoinicial {
+        font-size: 2em;
+    }
+
+    #formulario {
+        padding: 50px;
+        left: 500px;
+        font-size: 1.5em;
+        border-radius: 20px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
+    }
+
+    #inputnome, #inputdata, #inputhorario {
+        font-size: 1em;
+    }
+
+    #inputhorario {
+        margin-bottom: 20px;
+    }
+
+    #btnconfirmar, #btncancelar {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+
+    #buttonmais {
+        bottom: 40px;
+        right: 15px;
+    }
+}
+
+
 /* Telas gigantes como Nest Hub Max */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     #titulo {
         font-size: 2em;
         padding: 10px;
@@ -169,8 +208,8 @@ footer {
 
     #formulario {
         font-size: 2em;
-        padding: 90px;
-        left: 250px;
+        padding: 30px;
+        left: 300px;
         border-radius: 20px;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
     }
@@ -217,8 +256,8 @@ footer {
 
     #formulario {
         padding: 30px;
-        font-size: 2em;
-        left: 200px;
+        font-size: 1.5em;
+        left: 250px;
         border-radius: 20px;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
     }
@@ -262,8 +301,8 @@ footer {
     }
 
     #formulario {
-        padding: 130px;
-        left: 50px;
+        padding: 60px;
+        left: 100px;
         font-size: 2em;
         border-radius: 20px;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.587);
@@ -309,8 +348,8 @@ footer {
 
     #formulario {
         padding: 70px;
-        font-size: 2em;
-        left: 50px;
+        font-size: 1.5em;
+        left: 100px;
         border-radius: 20px;
         box-shadow: 1px 1px 15px  rgba(0, 0, 0, 0.587);
     }
