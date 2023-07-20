@@ -1,5 +1,7 @@
 $(function() {
     var numTarefas = 0;
+    var contador = 0;
+    
 
     $('#buttonmais').click(function() {
         abrirformulario();
@@ -9,22 +11,45 @@ $(function() {
         conferirCampos();
         
 
-    })
+    });
 
     $('#btncancelar').click(function() {
         cancelar();
-    })
+    });
 
     $('#formulario input').focusin(function() {
         $(this).css("background", "white");
         $(this).css("color", "black");
-    })
+    });
+
+    // digitar enter e ir pulando para o próximo campo de preenchimento campo
+    $('#inputnome').keyup(function() {
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            $('#inputdata').focus();
+        }
+    });
+
+    $('#inputdata').keyup(function() {
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            $('#inputhorario').focus();
+        }
+    });
+
+    $('#inputhorario').keyup(function() {
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            $('#btnconfirmar').click();
+        }
+    });
 
 
     function abrirformulario() {
         if(numTarefas == 0) {
             $('#textoinicial').hide();
             $('.soprohiddenfuncionar').fadeIn();
+            $('#buttonmais').hide();
         }
     }
 
@@ -48,7 +73,47 @@ $(function() {
     }
 
     function criarTarefa() {
-        alert('Criar tarefa tarefinha');
+        let resultado = $('#areaLista');
+        var nomeTarefa = $('#inputnome').val();
+        var dataTarefa = $('#inputdata').val();
+        var horarioTarefa = $('#inputhorario').val();
+        let novaTarefa;
+
+        let dataTarefaPadraoBr = dataTarefa.split('-').reverse().join('/');
+        contador++;
+        numTarefas++;
+
+         novaTarefa = `
+        <div class="tarefa" id="tarefa_${contador}">
+            <div class="icone-tarefa">
+                <i id="icone_${contador}" class="mdi mdi-circle-outline" onclick="marcarTarefa(${contador})"></i>
+            </div>
+
+            <div class="conteudo-tarefa_${contador}">
+                <p id="nometarefa_${contador}">${nomeTarefa}</p>
+                <p id="datatarefa_${contador}">${dataTarefa}</p>
+                <p id="horariotarefa_${contador}${horarioTarefa}">15:30</p>
+
+                <div class="areabotoestarefa">
+                    <p>
+                        <i id="btnupdatetarefa_${contador}" class="mdi mdi-update"></i>
+
+                        <i id="btnexcluirtarefa_${contador}" class="mdi mdi-delete"></i>
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        `
+
+        
+        resultado.innerHTML += novaTarefa;
+        $('#formulario').hide();
+        $('#buttonmais').fadeIn();
+       
+
     }
 
     function cancelar() {
@@ -56,6 +121,7 @@ $(function() {
             limparInputs();
             $('.soprohiddenfuncionar').hide();
             $('#textoinicial').fadeIn();
+            $('#buttonmais').fadeIn();
         }
     }
 
