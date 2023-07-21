@@ -115,6 +115,10 @@ $(function() {
 
     }
 
+    function marcarTarefa(id) {
+        var task = $('')
+    }
+
     function cancelar() {
         if(numTarefas == 0) {
             limparInputs();
