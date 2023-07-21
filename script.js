@@ -116,7 +116,8 @@ $(function() {
     }
 
     function marcarTarefa(id) {
-        var task = $('')
+        var item = $(`#${id}`);
+        alert(`A classe tem o item ${item}`);
     }
 
     function cancelar() {
