@@ -73,7 +73,7 @@ $(function() {
     }
 
     function criarTarefa() {
-        let resultado = $('#areaLista');
+        let resultado = window.document.getElementById('areaLista');
         var nomeTarefa = $('#inputnome').val();
         var dataTarefa = $('#inputdata').val();
         var horarioTarefa = $('#inputhorario').val();
@@ -83,21 +83,22 @@ $(function() {
         contador++;
         numTarefas++;
 
-         novaTarefa = `<div class="tarefa" id="tarefa_${contador}">
+         novaTarefa = `
+         <div class="tarefa" id="tarefa_${contador}">
             <div class="icone-tarefa">
                 <i id="icone_${contador}" class="mdi mdi-circle-outline" onclick="marcarTarefa(${contador})"></i>
             </div>
 
-            <div class="conteudo-tarefa_${contador}">
+            <div class="conteudo-tarefa">
                 <p id="nometarefa_${contador}">${nomeTarefa}</p>
                 <p id="datatarefa_${contador}">${dataTarefa}</p>
                 <p id="horariotarefa_${contador}${horarioTarefa}">15:30</p>
 
                 <div class="areabotoestarefa">
                     <p>
-                        <i id="btnupdatetarefa_${contador}" class="mdi mdi-update"></i>
+                        <i id="btnupdatetarefa" class="mdi mdi-update"></i>
 
-                        <i id="btnexcluirtarefa_${contador}" class="mdi mdi-delete"></i>
+                        <i id="btnexcluirtarefa" class="mdi mdi-delete"></i>
 
                     </p>
                 </div>
