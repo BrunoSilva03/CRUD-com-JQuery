@@ -118,8 +118,7 @@ $(function() {
     function marcarTarefa(id) {
         var item = $(`#${id}`);
         alert(`A classe tem o item ${item}`);
-        alert('Funcional?');
-        alert('Funcional')
+   
     }
 
     function cancelar() {
