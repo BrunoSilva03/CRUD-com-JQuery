@@ -99,9 +99,9 @@ $(function() {
 
                 <div class="areabotoestarefa">
                     <p>
-                        <i id="btnupdatetarefa" class="mdi mdi-update"></i>
+                        <i id="btnupdatetarefa" class="mdi mdi-update" onclick="updateTarefa(${contador})"></i>
 
-                        <i id="btnexcluirtarefa" class="mdi mdi-delete"></i>
+                        <i id="btnexcluirtarefa" class="mdi mdi-delete" onclick=excluirTarefa(${contador})></i>
 
                     </p>
                 </div>
@@ -119,11 +119,17 @@ $(function() {
 
     }
 
-    function marcarTarefa(id) {
-        var item = $(`#${id}`);
+    function marcarTarefa(idTarefa) {
+        var item = $(`#${idTarefa}`);
+        alert('Clicou');
         alert(`A classe tem o item ${item}`);
         alert('Ok');
-   
+        
+    }
+
+
+    function updateTarefa(id) {
+        alert('oi');
     }
 
     function cancelar() {
