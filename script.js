@@ -138,6 +138,10 @@ $(function() {
             $('.soprohiddenfuncionar').hide();
             $('#textoinicial').fadeIn();
             $('#buttonmais').fadeIn();
+        } else {
+            limparInputs();
+            $('.soprohiddenfuncionar').hide();
+            $('#buttonmais').fadeIn();
         }
     }
 
