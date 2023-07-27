@@ -50,6 +50,9 @@ $(function() {
             $('#textoinicial').hide();
             $('.soprohiddenfuncionar').fadeIn();
             $('#buttonmais').hide();
+        } else {
+            $('.soprohiddenfuncionar').fadeIn();
+            $('#buttonmais').hide();
         }
     }
 
@@ -108,7 +111,8 @@ $(function() {
         </div>`
 
         
-        $('#formulario').hide();
+        $('.soprohiddenfuncionar').hide();
+        limparInputs();
         $('#buttonmais').fadeIn();
         resultado.innerHTML += novaTarefa;
        
