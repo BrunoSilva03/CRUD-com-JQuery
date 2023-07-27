@@ -87,7 +87,7 @@ $(function() {
         numTarefas++;
 
          novaTarefa = `
-         <div class="tarefa" id="tarefa_${contador}">
+         <div class="tarefa" id="${contador}">
             <div class="icone-tarefa">
                 <i id="icone_${contador}" class="mdi mdi-circle-outline" onclick="marcarTarefa(${contador})"></i>
             </div>
@@ -115,7 +115,6 @@ $(function() {
         limparInputs();
         $('#buttonmais').fadeIn();
         resultado.innerHTML += novaTarefa;
-       
 
     }
 
