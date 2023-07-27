@@ -88,8 +88,8 @@ $(function() {
 
          novaTarefa = `
          <div class="tarefa" id="${contador}">
-            <div class="icone-tarefa">
-                <i id="icone_${contador}" class="mdi mdi-circle-outline" onclick="marcarTarefa(${contador})"></i>
+            <div class="icone-tarefa" onclick="marcarTarefa(${contador})">
+                <i id="icone_${contador}" class="mdi mdi-circle-outline" ></i>
             </div>
 
             <div class="conteudo-tarefa">
@@ -114,7 +114,8 @@ $(function() {
         $('.soprohiddenfuncionar').hide();
         limparInputs();
         $('#buttonmais').fadeIn();
-        resultado.innerHTML += novaTarefa;
+       //resultado.innerHTML += novaTarefa;
+        $('#areaLista').append(novaTarefa);
 
     }
 
@@ -125,6 +126,10 @@ $(function() {
         alert('Ok');
         
     }
+
+    $('.icone-tarefa').on('click', function() {
+        $(this).parent('.tarefa').fadeOut(200);
+    })
 
 
     function updateTarefa(id) {
