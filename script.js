@@ -88,10 +88,11 @@ $(function() {
         contador++;
         numTarefas++;
 
+        /*
          novaTarefa = `
          <div class="tarefa" id="${contador}">
             <div class="icone-tarefa" onclick="marcarTarefa(${contador})">
-                <i id="icone_${contador}" class="mdi mdi-circle-outline" ></i>
+                <i id="icone" class="mdi mdi-circle-outline" ></i>
             </div>
 
             <div class="conteudo-tarefa">
@@ -111,13 +112,36 @@ $(function() {
 
 
         </div>`
+        */
 
         
         $('.soprohiddenfuncionar').hide();
         limparInputs();
         $('#buttonmais').fadeIn();
        //resultado.innerHTML += novaTarefa;
-        $('#areaLista').append(novaTarefa);
+        $('#areaLista').append(`
+        <div class="tarefa" id="${contador}">
+           <div class="icone-tarefa">
+               <i id="icone" class="mdi mdi-circle-outline" onclick="marcarTarefa(${contador})"></i>
+           </div>
+
+           <div class="conteudo-tarefa">
+               <p id="nometarefa_${contador}">${nomeTarefa}</p>
+               <p id="datatarefa_${contador}">${dataTarefa}</p>
+               <p id="horariotarefa_${contador}${horarioTarefa}">15:30</p>
+
+               <div class="areabotoestarefa">
+                   <p>
+                       <i id="btnupdatetarefa" class="mdi mdi-update" onclick="updateTarefa(${contador})"></i>
+
+                       <i id="btnexcluirtarefa" class="mdi mdi-delete" onclick=excluirTarefa(${contador})></i>
+
+                   </p>
+               </div>
+           </div>
+
+
+       </div>`);
         confereFooter();
 
     }
@@ -131,6 +155,14 @@ $(function() {
         
     }
     */
+
+    function marcarTarefa(id) {
+
+    }
+
+    function teste(id) {
+        alert('oi');
+    }
 
     $('#btnupdatetarefa').click(function() {
         alert('Você clicou no botão de update');
@@ -148,16 +180,43 @@ $(function() {
    
    //O unbind serve para não realizar o evento em forma de fila várias vezes, pq eventualmente o usuário vai clicar na área do 
    //#areaLista várias vezes, e #btnupdatetarefa não sobrescreveria e sim seria enfileirado. 
-    $('#areaLista').mouseenter(function() {
+    $('#areaLista').hover(function() {
 
-        $('.tarefa').unbind("click").on('click', function marcarTarefa(idTarefa) {
+        
+                //TAREFA FEITA E NÃO FEITA MARCADOR
+                $('#icone').unbind("click").on('click', function() {
+                    if($(this).hasClass('mdi-circle-outline')) {
+                        $(this).removeClass('mdi-circle-outline').addClass('mdi-check-circle');
+                        $('.tarefa').removeClass('tarefa').addClass('tarefa-feito');
+                    } else {
+                            $(this).removeClass('mdi-check-circle').addClass('mdi-circle-outline');
+                            $('.tarefa-feito').removeClass('tarefa-feito').addClass('tarefa');
+                    }
+                })
+           
+        /*
+        $('.tarefa').unbind("click").click(function marcarTarefa(idTarefa) {
             $(this).removeClass('tarefa').addClass('tarefa-feito');
         });
+        */
 
-        $('.tarefa-feito').unbind("click").on('click', function marcarTarefa(idTarefa) {
-            $(this).removeClass('tarefa-feito').addClass('tarefa');
-            $('.md').removeClass('mdi-circle-outline').addClass('mdi-check-circle');
+        $('.tarefa').hover(function() {
+            $('.icone-tarefa').hover(function() {
+                $('.icone').unbind("click").on('click', function() {
+                    $(this).removeClass('mdi-circle-outline').addClass('mdi-check-circle');
+                })
+            })
         })
+
+        $('.tarefa-feito').unbind("dblclick").dblclick(function marcarTarefa(idTarefa) {
+            $(this).removeClass('tarefa-feito').addClass('tarefa');
+            
+        })
+
+        $('mdi').unbind("dblclick").on('click', function() {
+            $(this).removeClass('mdi-circle-outline').addClass('mdi-check-circle');
+            
+        });
 
         $('#btnupdatetarefa').unbind("click").on('click', function() {
             alert('Tá clicando no update tarefa');
@@ -173,7 +232,7 @@ $(function() {
 
 
     function updateTarefa(id) {
-        alert('oi');
+      
     }
 
     function cancelar() {
