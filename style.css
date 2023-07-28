@@ -181,6 +181,8 @@ footer {
     position: fixed;
     width: 100%;
     padding: 11px;
+    
+    transition: background 3s linear;
 }
 
 /* Telas gigantes */

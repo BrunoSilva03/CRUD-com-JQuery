@@ -45,6 +45,8 @@ $(function() {
     });
 
 
+    
+
     function abrirformulario() {
         if(numTarefas == 0) {
             $('#textoinicial').hide();
@@ -116,6 +118,7 @@ $(function() {
         $('#buttonmais').fadeIn();
        //resultado.innerHTML += novaTarefa;
         $('#areaLista').append(novaTarefa);
+        confereFooter();
 
     }
 
@@ -155,5 +158,14 @@ $(function() {
         $('#formulario input').val('');
         $('#formulario input').css("background", "white");
         $('#formulario input').css("color", "black");
+    }
+
+
+    function confereFooter() {
+        if(numTarefas >= 2) {
+            $('footer').css("background", "#4ae4279d");
+        } else {
+            $('footer').css("background", "#39e612");
+        }
     }
 })
