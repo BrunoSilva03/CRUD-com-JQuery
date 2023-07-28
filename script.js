@@ -122,6 +122,7 @@ $(function() {
 
     }
 
+    /*
     function marcarTarefa(idTarefa) {
         var item = $(`#${idTarefa}`);
         alert('Clicou');
@@ -129,6 +130,7 @@ $(function() {
         alert('Ok');
         
     }
+    */
 
     $('#btnupdatetarefa').click(function() {
         alert('Você clicou no botão de update');
@@ -147,8 +149,22 @@ $(function() {
    //O unbind serve para não realizar o evento em forma de fila várias vezes, pq eventualmente o usuário vai clicar na área do 
    //#areaLista várias vezes, e #btnupdatetarefa não sobrescreveria e sim seria enfileirado. 
     $('#areaLista').mouseenter(function() {
+
+        $('.tarefa').unbind("click").on('click', function marcarTarefa(idTarefa) {
+            $(this).removeClass('tarefa').addClass('tarefa-feito');
+        });
+
+        $('.tarefa-feito').unbind("click").on('click', function marcarTarefa(idTarefa) {
+            $(this).removeClass('tarefa-feito').addClass('tarefa');
+            $('.md').removeClass('mdi-circle-outline').addClass('mdi-check-circle');
+        })
+
         $('#btnupdatetarefa').unbind("click").on('click', function() {
             alert('Tá clicando no update tarefa');
+        });
+
+        $('#btnexcluirtarefa').unbind("click").on('click', function excluirTarefa(idTarefa) {
+            alert('Tá clicando no botão de excluir tarefa');
         });
     })
     
