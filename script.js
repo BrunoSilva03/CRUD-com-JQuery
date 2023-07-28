@@ -130,9 +130,30 @@ $(function() {
         
     }
 
-    $('.icone-tarefa').on('click', function() {
-        $(this).parent('.tarefa').fadeOut(200);
+    $('#btnupdatetarefa').click(function() {
+        alert('Você clicou no botão de update');
     })
+
+    $('.icone-tarefa').on('click', function marcarTarefa() {
+        $(this).parent('.tarefa').fadeOut(200);
+        alert('Funcionou!');
+    });
+
+   $('.tarefa').click(function() {
+        alert('Você clicou na tarefa!!!!!')
+   })
+
+   
+   //O unbind serve para não realizar o evento em forma de fila várias vezes, pq eventualmente o usuário vai clicar na área do 
+   //#areaLista várias vezes, e #btnupdatetarefa não sobrescreveria e sim seria enfileirado. 
+    $('#areaLista').mouseenter(function() {
+        $('#btnupdatetarefa').unbind("click").on('click', function() {
+            alert('Tá clicando no update tarefa');
+        });
+    })
+    
+
+    
 
 
     function updateTarefa(id) {
