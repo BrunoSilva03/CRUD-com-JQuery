@@ -134,7 +134,7 @@ $(function () {
                    <p>
                        <i id="btnupdatetarefa" class="mdi mdi-update" onclick="updateTarefa(${contador})"></i>
 
-                       <i id="btnexcluirtarefa" class="mdi mdi-delete" onclick=excluirTarefa(${contador})></i>
+                       <i id="btnexcluirtarefa" class="mdi mdi-delete" onclick="excluirTarefa(${contador})"></i>
 
                    </p>
                </div>
@@ -166,6 +166,7 @@ $(function () {
 
     $('#btnupdatetarefa').click(function () {
         alert('Você clicou no botão de update');
+        
     })
 
     $('.icone-tarefa').on('click', function marcarTarefa() {
